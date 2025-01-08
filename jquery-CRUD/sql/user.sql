@@ -13,7 +13,4 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `pass`, `email`) VALUES
 (1, '1234', 'admin@hotmail.com'),
-(2, '1234', 'demo@hotmail.com'),
-(4, '1234', 'sumon@gmail.com'),
-(5, '1234', 'rowdra@email.com'),
-(6, '1234', 'admin@email.com');
+(2, '1234', 'demo@hotmail.com');
