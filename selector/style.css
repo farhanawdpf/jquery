@@ -1,6 +1,13 @@
-.one{ 
+#one{ 
     height: 60px;
     background-color: rgb(54, 10, 37);
+    margin-bottom: 10px;
+    /* display: none;  */
+}
+
+.two{ 
+    height: 60px;
+    background-color: rgb(20, 10, 54);
     margin-bottom: 10px;
     /* display: none;  */
 }

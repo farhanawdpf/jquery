@@ -10,11 +10,94 @@
 </head>
 <body>
 
-    <div class="one"></div>
-    <div class="one"></div>
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <div id="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <p>Lorem ipsum dolor sit. first</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum dolor sit.</p>
+    <h1>Hello</h1>
+
+<table border="1"> 
+    
+    <tr> 
+        <td>1</td>
+        <td>name</td>
+        <td>email</td>
+    </tr>
+    <tr> 
+        <td>02</td>
+        <td>hh</td>
+        <td>$gxf</td>
+    </tr>
+    <tr> 
+        <td>3</td>
+        <td>name</td>
+        <td>email</td>
+    </tr>
+    <tr> 
+        <td>4</td>
+        <td>name</td>
+        <td>email</td>
+    </tr>
+</table>
+<br>
+<h1>First step</h1>
+
+<ul> 
+    <li>setp -1</li>
+    <li>setp -2</li>
+    <li>setp -3</li>
+    <li>setp -4</li>
+    <li>setp -5</li>
+    <li>setp -6</li>
+</ul>
+<h1>second step</h1>
+<ul> 
+    <li>setp -1</li>
+    <li>setp -2</li>
+    <li>setp -3</li>
+    <li>setp -4</li>
+    <li>setp -5</li>
+    <li>setp -6</li>
+</ul>
+
+    <button id="hide">click here for hide</button>
+    <button id="show">click here for show</button>
+    <button id="t">click here toggle</button>
+    <script src="js/jquery.js"></script>
+
+
     <script>
-    $('.one').hide(5000);
+ 
+        $(document).ready(function(){
+        $("tr:odd").hide(4000);
+        });
+
+         $(document).ready(function(){
+        $("ul li:last-child").hide(4000);
+        });
+    $(document).ready(function(){
+      $("#hide").click(function(){
+      $("tr:even").hide(5000);
+     });
+     $("#show").click(function(){
+      $("h1").show(5000);
+     });
+    });
+
+    $(document).ready(function(){ 
+    $("#t").click(function(){ 
+        $("h1").toggle(5000);
+    });
+    })
+
+
+
+
+
     </script>
 
 </body>
