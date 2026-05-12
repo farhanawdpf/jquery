@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+        .myadd {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" style="display:none; background:lightblue; padding:20px;">
+        Hello jQuery SlideDown!
+    </div>
+    <button id="btn">slide</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#box").addClass("myadd");
+            });
+        })
+        // $('p').show();
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $('p').slideDown(1000);
+                // $('p').toggle(2000);
+            })
+            $("#show").click(function () {
+                $('p').show(2000);
+            })
+
+        })
+
+
+
+        $(document).ready(function () {
+            //
+        })
+
+
+
+
+
+        // $(document).ready(function () {
+        //     $("#hide").click(function () {
+        //         $("p").hide();
+        //     });
+        // });
+    </script>
+
+
+</body>
+
+</html>

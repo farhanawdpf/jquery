@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+</head>
+
+<body>
+    <!-- (
+    attr,removeAttr,prop(change property) -->
+    <!-- prop(property,value) -->
+    <a href="#" target="_blank">w3school</a>
+
+    <img id="im" src="img.jfif" alt="" width="200px">
+    <button id="btn">change size</button>
+    <br>
+    <hr>
+    <input type="checkbox" id="chk">
+    <button id="btn2">change prop</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('#im').attr("width", 50)
+            })
+        })
+
+        $(document).ready(function () {
+            $('#btn2').click(function () {
+                $('#chk').prop("checked", false)
+            })
+        })
+
+
+        $("a").attr("href", "https://www.w3schools.com/");
+        $("a").removeAttr("target");
+    </script>
+</body>
+
+</html>

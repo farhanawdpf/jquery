@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+        .myclass {
+            color: rgb(224, 17, 89);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- $() -->
+    <!-- for single css -->
+    <!-- $(selector).css("property","value"); -->
+    <!-- for multiple css -->
+    <!-- $(selector).css({ 
+          "property","value",
+          "property","value",
+          "property","value"
+         }); -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <h id="demo">Hello world</h>
+
+
+    <button id="btn">Change CSS</button>
+
+    <script>
+        $('#btn').click(function () {
+            // $('p').addClass('myclass')
+            // $('p').removeClass('myclass')
+            $('p').toggleClass('myclass')
+        })
+    </script>
+</body>
+
+</html>

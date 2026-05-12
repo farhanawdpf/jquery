@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text">
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+
+    <select id="city">
+        <option>Dhaka</option>
+        <option>Khulna</option>
+    </select>
+    <br><br>
+    <input type="text" id="email">
+    <br><br>
+    <input type="text" id="e">
+    <br><br>
+    <input type="text" id="name">
+
+    <script>
+        $("#myForm").submit(function () {
+            alert("Form Submitted");
+        });
+
+
+        $("#city").change(function () {
+            alert("City Changed");
+        });
+
+
+        $("#email").blur(function () {
+            $(this).css("background", "green");
+        });
+        // when click Input box then work
+        $("#e").focus(function () {
+            $(this).css("background", "lightblue");
+        });
+        // Key press to work
+        // $("#name").keyup(function () {
+        //     alert("Key Released");
+        // });
+
+        $("#name").keydown(function () {
+            alert("Key Pressed");
+        });
+    </script>
+</body>
+
+</html>

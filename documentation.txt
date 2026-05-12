@@ -1,0 +1,227 @@
+jQuery Types / Categories
+
+jQuery 			
+
+Type
+			work
+Selectors		HTML element select করা
+Events			Click, keypress ইত্যাদি handle করা
+Effects	                Animation করা
+HTML Manipulation	HTML/Text change করা
+CSS Manipulation	CSS change করা
+AJAX			Server থেকে data আনা
+Traversing		Parent/child element খোঁজা
+
+1. Selectors
+
+$("#id")
+$(".class")
+$("p")
+
+2. Events
+$("#btn").click(function(){
+    alert("Clicked");
+
+
+Common Events:
+
+click()
+dblclick()->Double click করলে কাজ করবে।
+<p id="text">Double Click Me</p>
+
+<script>
+$("#text").dblclick(function(){
+    alert("Double Clicked!");
+});
+</script>
+
+mouseleave()
+keyup()
+keydown()
+focus() Event:
+Input box এ click করলে কাজ করবে।
+blur() Event:
+Input box থেকে বের হলে কাজ করবে।
+submit() Event:
+Form submit হলে কাজ করবে।
+
+change() Event:
+Input/select এর value পরিবর্তন হলে কাজ করবে।
+
+ mouseenter() Event:
+Mouse element এর উপর গেলে কাজ করবে।
+<div id="box" style="width:100px;height:100px;background:red;"></div>
+
+
+<script>
+$("#box").mouseenter(function(){
+    $(this).css("background","blue");
+});
+</script>
+3. Effects
+
+$("p").hide();
+$("p").show();
+$("p").toggle();
+
+More Effects:
+
+fadeIn()
+fadeOut()
+slideUp()
+slideDown()
+
+
+
+4. HTML Manipulation
+
+HTML/Text/append/prepend/after/before
+HTML=>html content change
+Text=>only text change
+append=>added to last line
+prepend=>add content to start line
+after=>add after element
+before=>add before element
+$("#demo").text("Hello");
+$("#demo").html("<b>Hello</b>");
+
+
+
+5. CSS Manipulation
+
+CSS change
+
+$("#demo").css("color","red");
+
+In jQuery, CSS Manipulation means changing CSS styles using jQuery methods.
+
+Main jQuery CSS Methods
+1. css() Method
+
+Used to get or set CSS properties.
+
+Syntax
+$(selector).css("property","value");
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<p id="demo">Hello jQuery</p>
+
+<button id="btn">Change CSS</button>
+
+<script>
+$("#btn").click(function(){
+
+    $("#demo").css("color", "red");
+    $("#demo").css("font-size", "30px");
+    $("#demo").css("background", "yellow");
+
+});
+</script>
+
+</body>
+</html>
+Multiple CSS Properties
+$("#demo").css({
+    "color":"white",
+    "background":"black",
+    "font-size":"25px"
+});
+Get CSS Value
+var color = $("#demo").css("color");
+
+alert(color);
+Width and Height Manipulation
+Set Width
+$("#box").width("300px");
+Get Width
+var w = $("#box").width();
+Add / Remove CSS Class
+addClass()
+$("#demo").addClass("myclass");
+removeClass()
+$("#demo").removeClass("myclass");
+toggleClass()
+$("#demo").toggleClass("myclass");
+Full Example
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.red{
+    color:white;
+    background:red;
+    padding:20px;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<p id="text">Learning jQuery CSS</p>
+
+<button id="add">Add Class</button>
+<button id="remove">Remove Class</button>
+<button id="toggle">Toggle Class</button>
+
+<script>
+
+$("#add").click(function(){
+    $("#text").addClass("red");
+});
+
+$("#remove").click(function(){
+    $("#text").removeClass("red");
+});
+
+$("#toggle").click(function(){
+    $("#text").toggleClass("red");
+});
+
+</script>
+
+</body>
+</html>
+
+6. AJAX
+
+Page reload without server data load 
+
+$.ajax({
+   url:"data.php",
+   success:function(data){
+      $("#result").html(data);
+   }
+});
+
+Common AJAX Options
+Option	কাজ
+url	কোন file এ request যাবে
+type	GET / POST
+data	data পাঠানোর জন্য
+success	request successful হলে
+error	error হলে
+
+
+Attribut-manipulate:
+    attr
+    removeAttr
+    prop(change property) -->
+    <!-- prop(property,value) -->
+
+7. Traversing
+
+Parent/child/sibling element finding
+
+$("#child").parent();
+$("#menu").children();
+
+
+Basic syntax is: $(selector).action()

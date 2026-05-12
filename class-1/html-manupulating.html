@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+</head>
+
+<body>
+
+    <p id="pera">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, vel, delectus magni cupiditate
+        accusantium illo quam atque ullam qui expedita inventore voluptatem tempora
+    </p>
+
+    <button id="btn">change text</button>
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('#pera').before("my country ")
+            })
+
+        })
+    </script>
+</body>
+
+</html>
